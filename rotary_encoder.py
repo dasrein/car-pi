@@ -1,6 +1,6 @@
 import RPi.GPIO as GPIO
 from time import sleep
-
+#test
 counter = 10
 
 Enc_A = 17
