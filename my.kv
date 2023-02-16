@@ -1,5 +1,5 @@
 # Filename: my.kv
-
+#:import br brightness
 <MyGrid>:
     GridLayout:
         cols:4
@@ -28,6 +28,7 @@
             max: 100
             value: 50
             on_value:label2.text = str(int(self.value))
+            on_value:br.write_value(str(int(self.value)))
         Label:
             id: label1
             text:"0"
