@@ -1,0 +1,36 @@
+# Filename: my.kv
+
+<MyGrid>:
+    GridLayout:
+        cols:4
+        rows:2
+        size: root.width, root.height
+        Button:
+            text:"Play"
+        Button:
+            text:"Pause"
+            on_press: app.btn()
+        Button:
+            text:"Shuffle"
+            on_press: app.btn()
+        Button:
+            text:"Repeat"
+            on_press: app.btn()
+        Slider:
+            orientation: "vertical"
+            min: 0
+            max: 100
+            value: 30
+            on_value:label1.text = str(int(self.value))
+        Slider:
+            orientation: "vertical"
+            min: 0
+            max: 100
+            value: 50
+            on_value:label2.text = str(int(self.value))
+        Label:
+            id: label1
+            text:"0"
+        Label:
+            id: label2
+            text: "0"
