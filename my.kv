@@ -1,37 +1,54 @@
 # Filename: my.kv
 #:import br brightness
-<MyGrid>:
-    GridLayout:
-        cols:4
-        rows:2
-        size: root.width, root.height
-        Button:
-            text:"Play"
-        Button:
-            text:"Pause"
-            on_press: app.btn()
-        Button:
-            text:"Shuffle"
-            on_press: app.btn()
-        Button:
-            text:"Repeat"
-            on_press: app.btn()
-        Slider:
-            orientation: "vertical"
-            min: 0
-            max: 100
-            value: 30
-            on_value:label1.text = str(int(self.value))
-        Slider:
-            orientation: "vertical"
-            min: 0
-            max: 100
-            value: 50
-            on_value:label2.text = str(int(self.value))
-            on_value:br.write_value(str(int(self.value)))
-        Label:
-            id: label1
-            text:"0"
-        Label:
-            id: label2
-            text: "0"
+
+<MyLayout>:
+    Button:
+        text:"Play"
+        pos_hint: {"x":0, "y":0.8}
+        font_size: 20
+        size_hint: 0.2, 0.2
+        background_color: 0, 1, 0 ,1
+    Button:
+        text:"Pause"
+        pos_hint: {"x":0.25, "y":0.8}
+        font_size: 20
+        size_hint: 0.2, 0.2
+        background_color: 0, 1, 0 ,1
+    Button:
+        text:"Shuffle"
+        pos_hint: {"x":0.5, "y":0.8}
+        font_size: 20
+        size_hint: 0.2, 0.2
+        background_color: 0, 1, 0 ,1
+    Button:
+        text:"Repeat"
+        pos_hint: {"x":0.75, "y":0.8}
+        font_size: 20
+        size_hint: 0.2, 0.2
+        background_color: 0, 1, 0 ,1
+    Slider:
+        orientation: "vertical"
+        min: 0
+        max: 100
+        value: 30
+        on_value:label1.text = str(int(self.value))
+        pos_hint: {"x":0, "y":0}
+        size_hint: 0.3, 0.6
+    Slider:
+        orientation: "vertical"
+        min: 0
+        max: 100
+        value: 50
+        on_value:label2.text = str(int(self.value))
+        on_value:br.write_value(str(int(self.value)))
+        pos_hint: {"x":0.5, "y":0}
+        size_hint: 0.3, 0.6
+    Label:
+        id: label1
+        text:"0"
+        pos_hint: {"center_x": 0.1, "center_y":0.3}
+        size_hint: 0.3, 0.3
+    Label:
+        id: label2
+        text: "0"
+        pos_hint: {"center_x": 0.6, "center_y": 0.3}

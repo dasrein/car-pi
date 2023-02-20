@@ -5,19 +5,23 @@ from kivy.uix.gridlayout import GridLayout
 from kivy.uix.textinput import TextInput
 from kivy.uix.button import Button
 from kivy.uix.widget import Widget
+from kivy.uix.floatlayout import FloatLayout
+from kivy.config import Config
 
 import brightness
 
 # import audacious
 
+Config.set("graphics", "resizable", True)
 
-class MyGrid(Widget):
+
+class MyLayout(FloatLayout):
     pass
 
 
 class MyApp(App):  # <- Main Class
     def build(self):
-        return MyGrid()
+        return MyLayout()
 
 
 if __name__ == "__main__":
