@@ -29,3 +29,4 @@ def play():
     
 # add play, pause, next song, previous song, stop
 # audacious -t, -f, -r, -s
+# C:\Program Files (x86)\Audacious\bin\audacious.exe

@@ -19,7 +19,7 @@ def init():
 
 def rotation_decode(Enc_A):
     global counter
-    sleep(0.002)
+    sleep(0.002) #epic debounce
     Switch_A = GPIO.input(Enc_A)
     Switch_B = GPIO.input(Enc_B)
 
